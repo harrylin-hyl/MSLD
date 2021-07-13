@@ -27,7 +27,6 @@ This repository holds the source code of the paper: "_Fast and Accurate Lane Det
       - [TuSimple](#tusimple)
       - [LLAMAS](#llamas)
     - [5. Code structure](#5-code-structure)
-    - [6. Citation](#6-citation)
 
 
 ### 1. Prerequisites
@@ -154,19 +153,8 @@ python main.py test --exp_name laneatt_r34_tusimple
 - **main.py:** Runs the training or testing phase of an experiment
 
 
-### 6. Citation
+<!-- ### 6. Citation
 If you use this code in your research, please cite:
 
 ```bibtex
-@misc{laneatt2020arxiv,
-  author    = {Lucas Tabelini
-               and Rodrigo Berriel
-               and Thiago M. Paix\~ao
-               and Claudine Badue
-               and Alberto Ferreira De Souza
-               and Thiago Oliveira-Santos},
-  title     = {{Keep your Eyes on the Lane: Real-time Attention-guided Lane Detection}},
-  eprint    = {arXiv:2010.12035},
-  year      = {2020}
-}
-```
+``` -->
