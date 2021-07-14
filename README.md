@@ -22,11 +22,6 @@ This repository holds the source code of the paper: "_Fast and Accurate Lane Det
       - [Datasets](#datasets)
       - [Training & testing](#training--testing)
       - [Reproducing a result from the paper](#reproducing-a-result-from-the-paper)
-    - [4. Results](#4-results)
-      - [CULane](#culane)
-      - [TuSimple](#tusimple)
-      - [LLAMAS](#llamas)
-    - [5. Code structure](#5-code-structure)
 
 
 ### 1. Prerequisites
@@ -75,12 +70,16 @@ If you want to evaluate another checkpoint, the `--epoch` flag can be used. For 
 #### Reproducing a result from the paper
 0. Set up the dataset you want to reproduce the results on (as described in [DATASETS.md](DATASETS.md)).
 1. Download the zip containing all pretrained models  and then unzip it at the code's root:
-```bash
+```
+Baidu Cloud Disk "https://pan.baidu.com/s/1IosBoyd26zBTUEcg4s5Gsw". Extraction Code: "g2be". 
+unzip msld_experiments.zip
+```
+<!-- ```bash
 gdown "https://drive.google.com/uc?id=1R638ou1AMncTCRvrkQY6I-11CPwZy23T" # main experiments on TuSimple, CULane and LLAMAS (1.3 GB)
 or Baidu Cloud Disk "https://pan.baidu.com/s/1IosBoyd26zBTUEcg4s5Gsw". Extraction Code: "g2be". 
 unzip msld_experiments.zip
-```
-2. Run the evaluation (inference + metric computation):
+``` -->
+1. Run the evaluation (inference + metric computation):
 ```bash
 python main.py test --exp_name $EXP_NAME
 ```
