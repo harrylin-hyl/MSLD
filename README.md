@@ -5,7 +5,7 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/keep-your-eyes-on-the-lane-attention-guided/lane-detection-on-culane)](https://paperswithcode.com/sota/lane-detection-on-culane?p=keep-your-eyes-on-the-lane-attention-guided) -->
 </div>
 
-This repository holds the source code of the paper: "_Fast and Accurate Lane Detection via Frequency Domain Learning_" (Link:). We introduce multi-frequency analysis into lane detection to achieve high accuracy while without much speed delay.
+This repository holds the source code of the paper: "_Fast and Accurate Lane Detection via Frequency Domain Learning_" (Link:). We introduce multi-frequency analysis into lane detection to achieve high accuracy while without much speed delay. (**This repository is heavily based on the state-of-the-art lane detection model [msld](https://arxiv.org/abs/2010.12035).**)
 
 **Our paper has been accepted to ACMMM'21.** 
 
@@ -42,8 +42,8 @@ Conda is not necessary for the installation, as you can see, I only use it for P
 Nevertheless, the installation process here is described using it.
 
 ```bash
-conda create -n laneatt python=3.8 -y
-conda activate laneatt
+conda create -n msld python=3.8 -y
+conda activate msld
 conda install pytorch==1.6 torchvision -c pytorch
 pip install -r requirements.txt
 cd lib/nms; python setup.py install; cd -
@@ -58,12 +58,12 @@ Train a model:
 ```
 python main.py train --exp_name example --cfg example.yml
 ```
-For example, to train LaneATT with the ResNet-34 backbone on TuSimple, run:
+For example, to train msld with the ResNet-34 backbone on TuSimple, run:
 ```
-python main.py train --exp_name laneatt_r34_tusimple --cfg cfgs/laneatt_tusimple_resnet34.yml
+python main.py train --exp_name msld_r34_tusimple --cfg cfgs/msld_tusimple_resnet34.yml
 ```
 After running this command, a directory `experiments` should be created (if it does not already exists). Another
-directory `laneatt_r34_tusimple` will be inside it, containing data related to that experiment (e.g., model checkpoints, logs, evaluation results, etc)
+directory `msld_r34_tusimple` will be inside it, containing data related to that experiment (e.g., model checkpoints, logs, evaluation results, etc)
 
 Evaluate a model:
 ```
@@ -77,7 +77,7 @@ If you want to evaluate another checkpoint, the `--epoch` flag can be used. For 
 1. Download the zip containing all pretrained models  and then unzip it at the code's root:
 ```bash
 gdown "https://drive.google.com/uc?id=1R638ou1AMncTCRvrkQY6I-11CPwZy23T" # main experiments on TuSimple, CULane and LLAMAS (1.3 GB)
-unzip laneatt_experiments.zip
+unzip msld_experiments.zip
 ```
 2. Run the evaluation (inference + metric computation):
 ```bash
@@ -85,7 +85,7 @@ python main.py test --exp_name $EXP_NAME
 ```
 Replace `$EXP_NAME` with the name of a directory inside `experiments/`. For instance, if you want to reproduce the results using the ResNet-34 backbone on the TuSimple dataset, run:
 ```bash
-python main.py test --exp_name laneatt_r34_tusimple
+python main.py test --exp_name msld_r34_tusimple
 ```
 
 ### 4. Results
@@ -115,7 +115,7 @@ python main.py test --exp_name laneatt_r34_tusimple
 **Additional results can be seen in the paper.**
 
 ### 5. Code structure
-**This repository is based on the state-of-the-art lane detection model [LaneATT](https://arxiv.org/abs/2010.12035).**
+**This repository is based on the state-of-the-art lane detection model [msld](https://arxiv.org/abs/2010.12035).**
 
 
 - **cfgs:** Default configuration files
@@ -157,4 +157,15 @@ python main.py test --exp_name laneatt_r34_tusimple
 If you use this code in your research, please cite:
 
 ```bibtex
+@misc{msld2020arxiv,
+  author    = {Lucas Tabelini
+               and Rodrigo Berriel
+               and Thiago M. Paix\~ao
+               and Claudine Badue
+               and Alberto Ferreira De Souza
+               and Thiago Oliveira-Santos},
+  title     = {{Keep your Eyes on the Lane: Real-time Attention-guided Lane Detection}},
+  eprint    = {arXiv:2010.12035},
+  year      = {2020}
+}
 ``` -->
