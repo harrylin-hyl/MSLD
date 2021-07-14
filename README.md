@@ -55,7 +55,7 @@ python main.py train --exp_name example --cfg example.yml
 ```
 For example, to train msld with the ResNet-34 backbone on TuSimple, run:
 ```
-python main.py train --exp_name msld_r34_tusimple --cfg cfgs/msld_tusimple_resnet34.yml
+python main.py train --exp_name MSLD_r34_tusimple --cfg cfgs/msld_tusimple_resnet34.yml
 ```
 After running this command, a directory `experiments` should be created (if it does not already exists). Another
 directory `msld_r34_tusimple` will be inside it, containing data related to that experiment (e.g., model checkpoints, logs, evaluation results, etc)
@@ -85,7 +85,7 @@ python main.py test --exp_name $EXP_NAME
 ```
 Replace `$EXP_NAME` with the name of a directory inside `experiments/`. For instance, if you want to reproduce the results using the ResNet-34 backbone on the TuSimple dataset, run:
 ```bash
-python main.py test --exp_name msld_r34_tusimple
+python main.py test --exp_name MSLD_r34_tusimple
 ```
 
 ### 4. Results
