@@ -5,7 +5,7 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/keep-your-eyes-on-the-lane-attention-guided/lane-detection-on-culane)](https://paperswithcode.com/sota/lane-detection-on-culane?p=keep-your-eyes-on-the-lane-attention-guided) -->
 </div>
 
-This repository holds the source code of the paper: "_Fast and Accurate Lane Detection via Frequency Domain Learning_" (Link:). We introduce multi-frequency analysis into lane detection to achieve high accuracy while without much speed delay. (**This repository is heavily based on the state-of-the-art lane detection model [msld](https://arxiv.org/abs/2010.12035).**)
+This repository holds the source code of the paper: "_Fast and Accurate Lane Detection via Frequency Domain Learning_" (Link:). We introduce multi-frequency analysis into lane detection to achieve high accuracy while without much speed delay. (**This repository is heavily based on the state-of-the-art lane detection model [LaneATT](https://arxiv.org/abs/2010.12035).**)
 
 **Our paper has been accepted to ACMMM'21.** 
 
@@ -115,7 +115,7 @@ python main.py test --exp_name msld_r34_tusimple
 **Additional results can be seen in the paper.**
 
 ### 5. Code structure
-**This repository is based on the state-of-the-art lane detection model [msld](https://arxiv.org/abs/2010.12035).**
+**This repository is based on the state-of-the-art lane detection model [LaneATT](https://arxiv.org/abs/2010.12035).**
 
 
 - **cfgs:** Default configuration files
