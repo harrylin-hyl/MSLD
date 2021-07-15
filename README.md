@@ -71,6 +71,7 @@ If you want to evaluate another checkpoint, the `--epoch` flag can be used. For 
 0. Set up the dataset you want to reproduce the results on (as described in [DATASETS.md](DATASETS.md)).
 1. Download the zip containing all pretrained models  and then unzip it at the code's root:
 ```
+bash gdown https://drive.google.com/drive/folders/17m8vh-9ix-TqOpVKlWCknNaPZT3qHFIy?usp=sharing;
 Baidu Cloud Disk "https://pan.baidu.com/s/1IosBoyd26zBTUEcg4s5Gsw". Extraction Code: "g2be". 
 unzip experiments.zip
 ```
